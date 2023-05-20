@@ -1,0 +1,43 @@
+
+<table class='table is-striped is-hoverable'>
+    <thead>
+        <tr>
+            <th>ID. Factura</th>
+            <th >Num Factura</th>
+            <th>Nombre Cliente</th>
+            <th>Fecha emision</th>
+
+        </tr>
+    </thead>
+    <tbody>
+{%for factura in facturas%}
+    <tr>
+
+        <td>
+            {% if forloop.first %}
+            <b>{{factura.pk|upper|add:"."}}</b>
+            {% else %}
+                {{factura.pk}}
+            {% endif %}
+            
+        </td>
+        <td>{{factura.num}}</td>
+
+        <td>{{factura.cliente_nombre}}</td>
+        <td>{{factura.fecha_emision}}</td>
+     
+        
+    </tr>
+    
+    
+    <tr>
+        <th colspan="5"></th><th colspan="">Producto</th><th>Precio</th><th>Unidades</th>
+        
+    
+</tr>    
+{% include 'factura/detalle_factura.html' %} 
+
+
+{%endfor%}
+</tbody>
+</table>

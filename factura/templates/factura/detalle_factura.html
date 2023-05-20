@@ -1,0 +1,15 @@
+{% for articulo in factura.lineafactura.all %}
+<tr><td colspan="5"></td>
+        <td>{{ articulo.nombre_producto }}</td>
+        <td>{{ articulo.precio_unitario }}</td>
+        <td>{{ articulo.unidades }}</td>
+        
+    </tr>
+{% endfor %}
+
+<tr>
+    <td colspan="3"></td>
+        <td><b>Total: </b></td>
+        <td> {{total }}</td>
+    
+</tr>
