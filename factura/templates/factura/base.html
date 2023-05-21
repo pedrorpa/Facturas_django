@@ -2,7 +2,7 @@
 <html>
     
     <head>
-        <title> 
+        <title > 
             {{ title }}
         </title>
         
@@ -16,11 +16,12 @@
     </head>
 
     <body>
+       
 
         {% include 'factura/navbar.html'%}
 
-        <h1 class="title">Gestión de Facturas</h1>
-        <h2 class="subtitle">{{ title }}</h2>
+        <h1 align="center"  class="title">Gestión de Facturas</h1>
+        <h2 align="center" class="subtitle">{{ title }}</h2>
         
         
 
@@ -28,11 +29,11 @@
 
         {% endblock content %}
 
-        <p id="trademark">CopyRight Gestion Facturas 2023</p>
+        <p  id="trademark">CopyRight Gestion Facturas 2023</p>
 
         {% block javascript %}
         {% endblock javascript %}
-        
+
     </body>
 
 </html>

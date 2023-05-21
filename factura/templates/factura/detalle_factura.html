@@ -1,15 +1,41 @@
+{%load static%}
+<html>
+        <head>
+                <title>{{title}}</title>
+                <link rel="stylesheet" href="{%static 'factura/bulma.css'%}">
+                <link rel="stylesheet" 
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" 
+              integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" 
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
+        <a href= "{% url 'home' %}" role = "button" class="button is-primary">Regresar</a>
+<table class='table is-striped is-hoverable'>
+<thead >
+        <tr >
+            <th >Productos</th>
+            <th >Precio</th>
+            <th >unidades</th>
+        </tr>
+    </thead>
+    <tbody>
 {% for articulo in factura.lineafactura.all %}
-<tr><td colspan="5"></td>
+<tr>
+       
         <td>{{ articulo.nombre_producto }}</td>
-        <td>{{ articulo.precio_unitario }}</td>
-        <td>{{ articulo.unidades }}</td>
+        <td>{{ articulo.precio_unitario }}€</td>
+        <td>{{ articulo.unidades }}uds</td>
         
-    </tr>
+        
+</tr>
 {% endfor %}
 
-<tr>
-    <td colspan="3"></td>
-        <td><b>Total: </b></td>
-        <td> {{total }}</td>
+<tr is-selected>
     
-</tr>
+        <th colspan="3"><b>Total: </b></th>
+        <td >{{ total }}€</td>
+</tr>  
+
+
+</tbody>
+</table>
+</html>

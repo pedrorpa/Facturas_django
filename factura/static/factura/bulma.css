@@ -1,5 +1,15 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+#trademark {
+  text-align: right;
+  color: #00d1b2;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow: 0.3px 0.3px 0.5px rgba(0, 0, 0, 0.5);
+}
+
 .button,
 .input,
 .textarea,

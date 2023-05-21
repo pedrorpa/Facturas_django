@@ -20,8 +20,8 @@ from django.urls import include, path, re_path
 from factura import views
 
 urlpatterns = [
-    path("", views.homepage),
+    path("", views.homepage, name="home"),
     path("factura/<int:pk>", views.lista_factura),
-    path("detalle/<int:factura_id>", views.detalle_factura),
+    path("detalle/<int:factura_id>", views.detalle_factura, name="detalle_factura"),
     path("admin/", admin.site.urls),
 ]

@@ -11,7 +11,7 @@ def homepage(request):
         request,
         "factura/homepage.html",
         {
-            "title": "Gestion de Facturas",
+            "title": "Ultimas Facturas",
             "facturas": facturas,
         },
     )
@@ -42,6 +42,7 @@ def detalle_factura(request, factura_id):
         request,
         "factura/detalle_factura.html",
         {
+            "title": "Detalle de la factura",
             "factura": factura,
             "articulos": articulos,
             "total": total,
